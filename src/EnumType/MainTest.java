@@ -3,12 +3,12 @@ package EnumType;
 public class MainTest {
 
     public static void main(String[] args) {
-useConstantMethod(1);
-useConstantMethod(2);
-useConstantMethod(3);
-useConstantMethod(4);
-useConstantMethod(100);
-useConstantMethod(5);
+//useConstantMethod(1);
+//useConstantMethod(2);
+//useConstantMethod(3);
+//useConstantMethod(4);
+//useConstantMethod(100);
+//useConstantMethod(5);
 
 
 useEnumMethod(TransactionType.DEPOSIT);
@@ -50,5 +50,9 @@ useEnumMethod(TransactionType.OTHER);
             System.out.println("money is Other");
 
         }
+        System.out.println("Enum name= " +transactionType.name());// enum ismini ekran yazdıran
+        System.out.println("Enum code value= " +transactionType.getTransactionCode());//enum a tanımlı code getir methogu ile çağırırız
+        System.out.println("Enum ordinal= " +transactionType.ordinal());//enum a tanımlı code getir methogu ile çağırırız
     }
+
 }
