@@ -1,6 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.volatilekeyword;
-
-import javax.xml.namespace.QName;
+package AdvJavaPractice.Generics.multithreads.volatilekeyword;
 
 public class Numerator {
     private volatile static int counter=0;

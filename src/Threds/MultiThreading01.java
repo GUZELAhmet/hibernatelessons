@@ -23,15 +23,9 @@ public class MultiThreading01 {
         counter4.join();// bu thread geçmeden alt satıra geçme
         Long endTime2= System.currentTimeMillis();
         System.out.println("MultiThread ile geçen süre "+(endTime2-startTime2));
-
-
-
-
     }
-
-
 }
-
+//*****************************************************************************************************
 class CounterWithoutMultiThread {
     private int threadNum;
 
@@ -46,10 +40,8 @@ class CounterWithoutMultiThread {
             //Thread.sleep(500);// 0.5 saniye yavaşlasın
             System.out.println("i = " + i + "thread number" + threadNum);
 
-        }
-    }
-}
-
+        }    }}
+//*****************************************************************************************
 class CounterWithMultiThread  extends Thread{
     private  int threadNum;
 

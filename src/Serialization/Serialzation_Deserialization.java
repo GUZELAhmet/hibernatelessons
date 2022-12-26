@@ -7,12 +7,6 @@ public class Serialzation_Deserialization {
 
 //writeOject();//serialization
         readObjects();//desarialization
-
-
-
-
-
-
     }
 //writeOject
     private static void writeOject(){
@@ -31,9 +25,7 @@ public class Serialzation_Deserialization {
            e.printStackTrace();
        } catch (IOException e) {
            e.printStackTrace();
-       }
-
-    }
+       }       }
 
     //readObject
     private static void readObjects(){
@@ -56,12 +48,7 @@ public class Serialzation_Deserialization {
       }catch (IOException e){
         e.printStackTrace();}
 
-    }
-
-
-
-
-}
+    }     }
 
 //User clasının transfer edebilmek için implement eettik
 class User implements Serializable{
@@ -81,7 +68,6 @@ class User implements Serializable{
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -102,10 +88,7 @@ class User implements Serializable{
         this.tcKimlikNo = tcKimlikNo;
     }
 
-    //toString
-
-    @Override
-    public String toString() {
+        public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +

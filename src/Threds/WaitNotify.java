@@ -29,10 +29,6 @@ public class WaitNotify {
         });
         thread2.setName("deposit thread");
         thread2.start();
-
-
-
-
     }
 
     //para çekme methodu

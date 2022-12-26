@@ -1,8 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.creations;
-
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
+package AdvJavaPractice.Generics.multithreads.creations;
 
 public class ThreadCreation3 {
     //Task4: anonymous class kullanarak thread oluşturunuz.

@@ -1,4 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.creations;
+package AdvJavaPractice.Generics.multithreads.creations;
 
 public class Counter implements Runnable{
 

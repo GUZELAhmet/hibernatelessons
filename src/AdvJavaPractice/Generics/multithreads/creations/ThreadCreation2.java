@@ -1,4 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.creations;
+package AdvJavaPractice.Generics.multithreads.creations;
 
 public class ThreadCreation2 {
     public static void main(String[] args) {

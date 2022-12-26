@@ -2,14 +2,12 @@ package AdvJavaPractice.Generics.Interfaces;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /*Task: Okul yönetimi için öğrenci ve öğretmen kayıtlarını
    -oluşturan
    -görüntüleyen
    -güncelleyen
    -silen
    bir program yazınız.
-
    her iki sınıf içinde aynı methodlara ihtiyacımız var (add delete....)
    Implement edip bu methodları oluşturabilmek için  ve her iki
     clasın nesnelerini  parametre olarak alabilmek için generic tipte interfcace tanımladık
@@ -25,10 +23,7 @@ public class SchoolManagent {
         studentRepo.update(student);
         studentRepo.get(student);
         studentRepo.delete(student);
-
-
         System.out.println();
-
         teacherRepo.add(teacher);
         teacherRepo.update(teacher);
         teacherRepo.get(teacher);

@@ -1,10 +1,8 @@
-package AdvJavaPractice.Generics.Multithreading.synchronization;
+package AdvJavaPractice.Generics.multithreads.synchronization;
 //Multithreading programlamada birden fazla Thread aynı anda ortak bir kaynağa erişmeye çalışırsa
 //istenmeyen sonuçlar oluşacaktır. Bu durumda threadlere sırayla erişim vermek gerekecektir.
 // Bir thread kaynağı kullanıyorken diğerleri onu beklemelidirler. Bu "synchronized" keywordü ile sağlanır.
 //synchronized keyword method ve bloklarda kullanılır
-import javax.print.DocFlavor;
-import java.time.LocalDate;
 
 /*
 Task: Bir randevu oluşturma uygulaması tasarlayınız.(AppoinmentCenter)

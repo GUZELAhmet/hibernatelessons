@@ -6,11 +6,9 @@ public enum Role {
     ROLE_STUDENT("student");
 
     String name;
-
     Role(String name) {
         this.name = name;
     }
-
     public String getName() {
         return name;
     }

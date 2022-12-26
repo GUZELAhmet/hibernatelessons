@@ -10,10 +10,7 @@ public class MultiThreading02 {
             public void run() {
                 Counter.count();
                 System.out.println("Thread1 çalıştı");
-            }
-        });
-
-
+            }         });
         thread1.start();
 
         //2. thread oluşturuyoruz
@@ -22,13 +19,10 @@ public class MultiThreading02 {
             public void run() {
                 Counter.count();
                 System.out.println("Thread2 çalıştı");
-            }
-        });
+            }           });
        // thread1.join();
         thread2.start();
-    }
-
-}
+    }   }
 
 class Counter {
     public synchronized static void count(){// synchronized  bir thread bitmeden diğer thread için methodu çalıştırmaz
@@ -37,5 +31,4 @@ class Counter {
             MultiThreading02.counter++;
             }
         System.out.println("MultiThreading02.counter = " + MultiThreading02.counter);
-    }
-}
+    }   }

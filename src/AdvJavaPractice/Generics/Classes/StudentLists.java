@@ -13,36 +13,32 @@ Task: 1) Java dersi için, öğrencileri isim, vize notu ve final notunu  ile bi
 */
 public class StudentLists {
     public static void main(String[] args) {
-
         System.out.println("** Java dersi vize ve final notları **");
-listgrade();
+        listgrade();
         System.out.println(" == Kütüphane Üye Listesi == ");
-listMemberLibrary();
-
+        listMemberLibrary();
     }
-
 
     //öğrencilerin notlarını listeleyen bir method yazınız.
-    public static void listgrade(){
-        Student<String,Double,Double> std1=new Student<>("Wilma",76.8,80.0);
-        Student<String,Double,Double> std2=new Student<>("Fred",89.9,90.9);
-        Student<String,Double,Double> std3=new Student<>("Barni",56.8,70.0);
+    public static void listgrade() {
+        Student<String, Double, Double> std1 = new Student<>("Wilma", 76.8, 80.0);
+        Student<String, Double, Double> std2 = new Student<>("Fred", 89.9, 90.9);
+        Student<String, Double, Double> std3 = new Student<>("Barni", 56.8, 70.0);
 
-        System.out.printf("%-10s ||  %4s   ||  %4s %n",std1.getS(),std1.getU(),std1.getV());
-        System.out.printf("%-10s ||  %4s   ||  %4s %n",std2.getS(),std2.getU(),std2.getV());
-        System.out.printf("%-10s ||  %4s   ||  %4s %n",std3.getS(),std3.getU(),std3.getV());
+        System.out.printf("%-10s ||  %4s   ||  %4s %n", std1.getS(), std1.getU(), std1.getV());
+        System.out.printf("%-10s ||  %4s   ||  %4s %n", std2.getS(), std2.getU(), std2.getV());
+        System.out.printf("%-10s ||  %4s   ||  %4s %n", std3.getS(), std3.getU(), std3.getV());
 
     }
 
-
     //kütüphane üye öğrenci listesini yazdıran bir method yazınız.
-    public static void listMemberLibrary(){
-        Student<String,Integer,String> std1=new Student<>("çakıl", 567,"cakil@gmail.com");
-        Student<String,Integer,String> std2=new Student<>("bambam", 568,"bambam@gmail.com");
-        Student<String,Integer,String> std3=new Student<>("bety", 567,"bety@gmail.com");
-        System.out.printf("%-10s ||  %4d   ||  %20s %n",std1.getS(),std1.getU(),std1.getV());
-        System.out.printf("%-10s ||  %4d   ||  %20s %n",std2.getS(),std2.getU(),std2.getV());
-        System.out.printf("%-10s ||  %4d   ||  %20s %n",std3.getS(),std3.getU(),std3.getV());
+    public static void listMemberLibrary() {
+        Student<String, Integer, String> std1 = new Student<>("çakıl", 567, "cakil@gmail.com");
+        Student<String, Integer, String> std2 = new Student<>("bambam", 568, "bambam@gmail.com");
+        Student<String, Integer, String> std3 = new Student<>("bety", 567, "bety@gmail.com");
+        System.out.printf("%-10s ||  %4d   ||  %20s %n", std1.getS(), std1.getU(), std1.getV());
+        System.out.printf("%-10s ||  %4d   ||  %20s %n", std2.getS(), std2.getU(), std2.getV());
+        System.out.printf("%-10s ||  %4d   ||  %20s %n", std3.getS(), std3.getU(), std3.getV());
     }
 
 }

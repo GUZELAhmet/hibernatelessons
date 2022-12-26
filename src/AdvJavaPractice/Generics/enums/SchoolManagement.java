@@ -9,21 +9,14 @@ public class SchoolManagement {
             Student student = new Student("Tolstoy");
             Teacher teacher = new Teacher("Balzac");
 
-
         User user1=new User("Jules Verne",Role.ROLE_ADMIN);
         User user2=new User("C.Dickens",Role.ROLE_TEACHER);
         User user3=new User("J Steinback",Role.ROLE_STUDENT);
 
-
         deleteStudent(student,user1);
         deleteStudent(student,user3);
-
         deleteTeacher(teacher,user1);
-        deleteTeacher(teacher,user2);
-
-
-
-    }
+        deleteTeacher(teacher,user2);    }
 
     public static void deleteStudent(Student student ,User user) {
 
@@ -31,7 +24,6 @@ public class SchoolManagement {
             System.out.println("Student is Delete succesfully by" + user.getRole().name);
         } else {
             System.out.println(user.getRole().name + " is not permitted to delete Student");
-
         }}
 
     public static void deleteTeacher (Teacher teacher, User user){
@@ -39,7 +31,4 @@ public class SchoolManagement {
                 System.out.println("Teacher is DELETED successfully by " + user.getRole().name);
             } else {
                 System.out.println(user.getRole().name + " is not permitted to delete Teacher.");
-            }
-        }
-
-}
+            }       }     }

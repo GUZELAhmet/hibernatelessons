@@ -1,4 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.synchronization;
+package AdvJavaPractice.Generics.multithreads.synchronization;
 
 
 

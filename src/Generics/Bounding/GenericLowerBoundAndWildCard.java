@@ -1,5 +1,4 @@
 package Generics.Bounding;
-
 import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,17 +13,14 @@ public class GenericLowerBoundAndWildCard {
 //List<Double> dl=new ArrayList<>();
 //addElements(dl);//CTE  generic öncesi yapılarda  runtime error olurdu generic ile beraber compile
 
-
         //***********printElements methodu**************************
 //        List<String> st=new ArrayList<>();
 //        printElements(st);              alt satır ile aynı işlem
         printElements(new ArrayList<String>());
 
-
         //***********pritObj *******************************************
         List<String> strList=new ArrayList<>();
        // printObj(strList);  //CTE
-
     }
 
     //super Integer---> bana Integerin parentlerini getir (lowerbound bu)
@@ -33,8 +29,6 @@ public class GenericLowerBoundAndWildCard {
 
         for (int i = 1; i <= 10; i++) {
             list.add(i);
-
-
         }
 
     }
@@ -54,9 +48,6 @@ public class GenericLowerBoundAndWildCard {
         for (Object o : listOfObject) {
             System.out.println(o);
         }
-
-
     }
-
 
 }

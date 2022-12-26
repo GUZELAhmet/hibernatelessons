@@ -1,4 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.volatilekeyword;
+package AdvJavaPractice.Generics.multithreads.volatilekeyword;
 /*
 Birden fazla thread kullanılan bir uygulamada ,değişkenler performans nedeniyle CPU cache'inde tutulabilir.
 Bilgisayarın birden fazla CPU'su(çekirdek) olduğunu düşünürsek her thread farklı CPU üzerinde çalısabilir

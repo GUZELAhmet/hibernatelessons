@@ -1,4 +1,4 @@
-package AdvJavaPractice.Generics.Multithreading.creations;
+package AdvJavaPractice.Generics.multithreads.creations;
 /*
 
 1) Multithreading Programlama nedir?
