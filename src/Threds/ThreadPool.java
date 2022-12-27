@@ -33,17 +33,9 @@ ThreadCreator thread10= new ThreadCreator("thread10");
         service.execute(thread8);
         service.execute(thread9);
         service.execute(thread10);
-
         service.shutdown();
-
-
-
     }
 }
-
-
-
-
 
         class ThreadCreator extends Thread {
     private String threadName;
