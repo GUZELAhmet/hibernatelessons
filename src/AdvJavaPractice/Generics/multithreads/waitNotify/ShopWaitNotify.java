@@ -1,5 +1,6 @@
 package AdvJavaPractice.Generics.multithreads.waitNotify;
 /*
+
 TASK: Bir marketteki stok miktarını takip eden bir uygulama tasarlayınız.
       Markette yeterli ürün yoksa yeni ürün gelmesi beklensin.
       Yeni ürün eklenince ürün satışı gerçekleşsin.
