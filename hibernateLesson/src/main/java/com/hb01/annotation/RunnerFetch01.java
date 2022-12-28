@@ -62,6 +62,19 @@ public class RunnerFetch01 {
         Student01 uniqueResult2=session.createQuery(hqlQuery2,Student01.class).uniqueResult();
         System.out.println(uniqueResult2);
 
+        // yukarıdaki sorguyu HQL Alias kullanarak yapalım
+        String  hqlQuery3="FROM Student01 std WHERE std.name='Miraç'";
+        Student01 uniqResult2=session.createQuery(hqlQuery3,Student01.class).uniqueResult();
+        System.out.println(uniqResult2);
+        //**************************************************************************************
+        // grade değeri 90 olan öğrenciyigetirelim
+        String hqlQery4="SELECT s.id,s.name FROM Student01 s WHERE s.grade=90 ";
+        List<Object[]> ResultList4= session.createQuery(hqlQery4).getResultList();
+        for (Object[] s : ResultList4 ) {
+            System.out.println(Arrays.toString(s));
+        }
+
+
         tx.commit();
         session.close();
         sf.close();
