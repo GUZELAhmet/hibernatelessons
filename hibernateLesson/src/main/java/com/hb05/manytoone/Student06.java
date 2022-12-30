@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Student05 {
+public class Student06 {
     @Id
     private  int id;
 
