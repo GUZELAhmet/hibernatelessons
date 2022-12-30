@@ -9,18 +9,18 @@ import org.hibernate.cfg.Configuration;
 public class RunnerSave05 {
 
     public static void main(String[] args) {
-        Student05 student1 = new Student05();
+        Student06 student1 = new Student06();
         student1.setId(1001);
         student1.setName("Atılgan Şahin");
         student1.setGrade(70);
 
-        Student05 student2 = new Student05();
+        Student06 student2 = new Student06();
         student2.setId(1002);
         student2.setName("Errayn");
         student2.setGrade(70);
 
 
-        Student05 student3 = new Student05();
+        Student06 student3 = new Student06();
         student3.setId(1003);
         student3.setName("Emir");
         student3.setGrade(70);
