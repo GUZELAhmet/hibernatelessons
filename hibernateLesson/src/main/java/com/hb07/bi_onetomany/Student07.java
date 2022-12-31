@@ -1,6 +1,9 @@
 package com.hb07.bi_onetomany;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +19,8 @@ public class Student07 {
     private  int grade;
 
 
-    @OneToMany(mappedBy = "student", orphanRemoval = true,cascade = CascadeType.REMOVE)// orphanRemoval  null yaptığımız parentlerdde  childelerida siler
-    private List<Book07> bookList= new ArrayList<>();                                      //Casca
+    @OneToMany(mappedBy = "student")
+    private List<Book07> bookList= new ArrayList<>();
 
     public int getId() {
         return id;
