@@ -28,7 +28,14 @@
             <artifactId>postgresql</artifactId>
             <version>${postgresql.connector.version}</version>
         </dependency>
+        <!--
+        addAnnotatedClass(Student05.class).
+                addAnnotatedClass(University.class); yapısını kullanmadan aşagıdakı gibi Entity classlarımı ekleyebilirim
 
+
+        <mapping class="com.hb01.manytoone.Student05"/>
+        <mapping class="com.hb01.manytoone.University"/>
+            -->
     </dependencies>
 
 </project>

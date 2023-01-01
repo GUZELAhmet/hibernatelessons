@@ -13,16 +13,19 @@ public class MultiThreading01 {
         Long endTime = System.currentTimeMillis();
         System.out.println("WithoutMultiThread ile geçen süre "+(endTime-startTime));
         System.out.println("************************************************************");
-        Long startTime2= System.currentTimeMillis();
-        CounterWithMultiThread counter3 = new CounterWithMultiThread(1);
-        CounterWithMultiThread counter4 = new CounterWithMultiThread(2);
-        counter3.start();
-        System.out.println("----------------------");
+
+       Long startTime2= System.currentTimeMillis();
+       CounterWithMultiThread counter3 = new CounterWithMultiThread(1);
+       CounterWithMultiThread counter4 = new CounterWithMultiThread(2);
+
+       counter3.start();
+       System.out.println("----------------------");
         counter4.start();
-        counter3.join();//
-        counter4.join();// bu thread geçmeden alt satıra geçme
-        Long endTime2= System.currentTimeMillis();
-        System.out.println("MultiThread ile geçen süre "+(endTime2-startTime2));
+      counter3.join();// bekle counter3 thread çalışması  bittimi
+          //  System.out.println(" join between");
+     counter4.join();// bu thread geçmeden alt satıra geçme
+       Long endTime2= System.currentTimeMillis();
+       System.out.println("MultiThread ile geçen süre "+(endTime2-startTime2));
     }
 }
 //*****************************************************************************************************
@@ -35,7 +38,7 @@ class CounterWithoutMultiThread {
 
     }
 
-    public void countMe() throws InterruptedException {
+    public void countMe()  {
         for (int i = 0; i <= 10; i++) {
             //Thread.sleep(500);// 0.5 saniye yavaşlasın
             System.out.println("i = " + i + "thread number" + threadNum);
@@ -59,9 +62,9 @@ class CounterWithMultiThread  extends Thread{
     }
     public void countMe() throws InterruptedException {
         for (int i = 0; i <= 10; i++) {
-          //  Thread.sleep(500);// 0.5 saniye yavaşlasın
-            System.out.println("i = " + i + "thread number" + threadNum);
 
+            System.out.println("i = " + i + "thread number" + threadNum);
+         //   Thread.sleep(500);// 0.5 saniye yavaşlasın
         }
     }
 }

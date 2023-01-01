@@ -5,6 +5,10 @@ public class MultiThreading02 {
 
     public static void main(String[] args) throws InterruptedException {
         // ayrı ikitane trhead oluşturup aynı kaynağa erişmesini sağlayalım
+        for (int i=0; i<100;i++){
+            counter++;
+            System.out.println("counter = " + counter);
+        }
         Thread thread1=new Thread(new Runnable() {
             @Override
             public void run() {

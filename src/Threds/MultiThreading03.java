@@ -1,6 +1,6 @@
 package Threds;
 
-public class MultşThreading03 {
+public class MultiThreading03 {
 
     public static void main(String[] args) {
         Brackets brackets = new Brackets();
