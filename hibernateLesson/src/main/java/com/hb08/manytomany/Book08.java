@@ -1,4 +1,4 @@
-package com.hb07.manytomany;
+package com.hb08.manytomany;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +13,7 @@ public class Book08 {
 
     private String name;
 
-    @ManyToMany(mappedBy = "booklist")
+    @ManyToMany(mappedBy = "bookList")
         private List<Student08>  student = new ArrayList<>();
 
     // getter setter
@@ -48,7 +48,7 @@ public class Book08 {
         return "Book08{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", student=" + student +
+
                 '}';
     }
 }

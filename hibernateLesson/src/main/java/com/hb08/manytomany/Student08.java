@@ -1,4 +1,4 @@
-package com.hb07.manytomany;
+package com.hb08.manytomany;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,11 +11,12 @@ public class Student08 {
     @Column(name = "student_name",nullable = false)
     private String name;
 
+    private int grade;
+
     @ManyToMany
     @JoinTable(name = "student08_book08",
     joinColumns = @JoinColumn(name = "std_id"),
     inverseJoinColumns = {@JoinColumn(name = "book_id")})
-
     private List<Book08> bookList=new ArrayList<>();
 
     public int getId() {
@@ -24,6 +25,14 @@ public class Student08 {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
 
     public String getName() {
@@ -48,6 +57,6 @@ public class Student08 {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", bookList=" + bookList +
-                '}';
+                  '}';
     }
 }
