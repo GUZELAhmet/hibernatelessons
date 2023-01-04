@@ -6,11 +6,8 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.List;
-import java.util.Random;
 
 public class RunnerFetch11 {
     public static void main(String[] args) {
@@ -66,18 +63,30 @@ public class RunnerFetch11 {
 //
         //3. örnek grade notu 80 den fazla olanları görüntğle
 
-        criteriaQuery.select(root).where(cb.greaterThan(root.get("grade"),80));
-        Query<Student11> query2=session.createQuery(criteriaQuery);
-        List<Student11> students3=query2.getResultList();
-        students3.forEach(System.out::println);
+//        criteriaQuery.select(root).where(cb.greaterThan(root.get("grade"),80));
+//        Query<Student11> query2=session.createQuery(criteriaQuery);
+//        List<Student11> students3=query2.getResultList();
+//        students3.forEach(System.out::println);
 
         //4. örnek grade notu 95 den küçük  olanları gör
-        criteriaQuery.select(root).where(cb.lessThan(root.get("grade"),95));
-        Query<Student11> query3=session.createQuery(criteriaQuery);
-        List<Student11> students4=query3.getResultList();
-        students4.forEach(System.out::println);
+//        criteriaQuery.select(root).where(cb.lessThan(root.get("grade"),95));
+//        Query<Student11> query3=session.createQuery(criteriaQuery);
+//
+//        List<Student11> students4=query3.getResultList();
+//        students4.forEach(System.out::println);
 
+        //5.örnek  id si 1 veya mathgrade i 75 den büyük olan recerdu bualım
 
+        Long id =1L;
+
+        Predicate predicateForId =cb.equal(root.get("id"),id);
+        Predicate predicateForMathGrade= cb.greaterThan(root.get("grade"),75);
+        Predicate predicateQuery=cb.or(predicateForMathGrade,predicateForId);
+
+        criteriaQuery.where(predicateQuery).groupBy(root.get("grade"));
+        Query<Student11> query5=session.createQuery(criteriaQuery);
+        List<Student11> resultList6=query5.getResultList();
+        resultList6.forEach(System.out::println);
 
 
 

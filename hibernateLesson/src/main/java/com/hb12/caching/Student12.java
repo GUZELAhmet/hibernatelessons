@@ -4,7 +4,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 
 @Entity
-@Cacheable
+@Cacheable  //pomdaki eklemelerden sonra
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE,region = "Student12")
 public class Student12 {
     /*
